@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
-settings = Settings()
+# settings = Settings()  # Global settings disabled for demo
 
 security = HTTPBearer()
 
