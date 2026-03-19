@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
-settings = Settings()
-genai.configure(api_key=settings.google_api_key)
+# settings = Settings()
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY', 'demo-key'))
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 
