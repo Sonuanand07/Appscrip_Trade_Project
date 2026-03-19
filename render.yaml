@@ -3,7 +3,7 @@ services:
     name: trade-api
     env: python
     buildCommand: "pip install -r trade_opportunities_api/requirements.txt"
-    startCommand: "cd trade_opportunities_api && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    startCommand: "cd trade_opportunities_api && uvicorn trade_opportunities_api.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: GOOGLE_API_KEY
         generateValue: true
